@@ -1,0 +1,64 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  // overflow-y: auto;
+  // overflow-x: hidden;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  transition: all 1000ms ease-in;
+}
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+.is-hidden .modal {
+  transform: translate(-50%, 0%) scale(0.5);
+}
+.modal {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  width: 100%;
+  // width: 450px;
+  background-color: $primayry-white-color;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  transition: transform 1s;
+  padding-bottom: 40px;
+}
+.modal-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: $primayry-white-color;
+  padding: 0;
+  margin-left: auto;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
+  @include transition(fill);
+  outline: none;
+}
+.modal-button:hover,
+.modal-button:focus {
+  fill: $accent-color;
+}
+@include for-size(tablet) {
+  .modal {
+    width: 450px;
+  }
+}
+@include for-size(desktop) {
+  .modal {
+    width: 528px;
+  }
+}

@@ -1,0 +1,167 @@
+.form {
+  padding-left: 40px;
+  padding-right: 40px;
+
+  &-title {
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-bottom: 12px;
+    margin-top: 20px;
+  }
+  &-field {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  &-field label {
+    color: rgba(117, 117, 117, 1);
+    margin-bottom: 4px;
+  }
+
+  &-input {
+    margin-bottom: 10px;
+    width: 100%;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding-left: 42px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    outline: none;
+  }
+  &-input:focus {
+    border-color: $accent-color;
+  }
+  &-comit {
+    padding: 16px;
+    resize: none;
+    margin-bottom: 0;
+  }
+  &-icon {
+    position: absolute;
+    fill: $primayry-text-color;
+    top: 50%;
+    left: 15px;
+  }
+
+  &-input:focus + &-icon {
+    fill: $accent-color;
+  }
+}
+.checkbox {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  color: $title-text-color;
+  font-size: 11px;
+  line-height: 1.16;
+  letter-spacing: 0.03em;
+}
+.check {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.check-icon {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  margin-right: 7px;
+  border: 1px solid #000000;
+  border-radius: 2px;
+}
+.check:checked + .check-icon {
+  border-color: transparent;
+  background-color: $accent-color;
+  background-image: url(../image/icon/check.svg);
+  background-size: contain;
+  background-origin: border-box;
+}
+.contract {
+  text-decoration: underline;
+  color: $accent-color;
+  margin-left: 5px;
+}
+.form-button {
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.form-input:not(:placeholder-shown):invalid {
+  color: red;
+  border-color: red;
+}
+.form-input:not(:placeholder-shown):invalid + .form-icon {
+  fill: red;
+}
+.news {
+  position: relative;
+
+  /* display: inline-block; */
+}
+.news-form {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background-color: transparent;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 16px;
+  width: 100%;
+  margin-bottom: 20px;
+  color: $primayry-white-color;
+  outline: none;
+}
+.news-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+.news-icon {
+  fill: $primayry-white-color;
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+}
+.news-btn:hover .news-icon,
+.news-btn:focus .news-icon {
+  fill: $accent-color;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .news {
+    display: block;
+  }
+  .news-form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    width: 450px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+@include for-size(desktop) {
+  .checkbox {
+    font-size: 14px;
+    line-height: 1.71;
+  }
+  .news {
+    margin-left: 100px;
+  }
+  .news-form {
+    margin-right: 12px;
+    margin-bottom: 0;
+    width: 300px;
+  }
+}

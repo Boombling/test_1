@@ -1,0 +1,27 @@
+.footer-title {
+  margin-bottom: 20px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-align: start;
+  color: var(--primayry-white-color);
+  text-transform: uppercase;
+}
+.social-info {
+  display: flex;
+  align-items: baseline;
+}
+.social {
+  margin-left: 100px;
+}
+.social .icon-link {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.social .social-icon {
+  fill: var(--primayry-white-color);
+}
+.icon-link:hover,
+.icon-link:focus {
+  background-color: var(--accent-color);
+}

@@ -1,0 +1,96 @@
+.contacts {
+  display: block;
+  color: $title-text-color;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.16;
+  padding-bottom: 16px;
+  justify-content: center;
+  align-items: center;
+  @include transition(color);
+}
+.contacts:hover,
+.contacts:focus {
+  color: $accent-color;
+}
+.contacts-nav {
+  display: none;
+}
+.mail {
+  width: 16px;
+  height: 12px;
+  fill: $icon-color;
+  margin-right: 10px;
+  @include transition(fill);
+}
+.contacts-mail:hover .mail,
+.contacts-mail:focus .mail {
+  fill: $accent-color;
+}
+.phone {
+  width: 10px;
+  height: 16px;
+  fill: $icon-color;
+  margin-right: 10px;
+  @include transition(fill);
+}
+.contacts-phone:hover .phone,
+.contacts-phone:focus .phone {
+  fill: $accent-color;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .nav-item {
+    margin-right: 50px;
+  }
+  .nav-item:last-child {
+    margin-right: 0;
+  }
+  .contacts {
+    padding-bottom: 10px;
+  }
+  .contacts-phone {
+    padding-bottom: 0;
+  }
+  .mail {
+    width: 14px;
+    height: 10px;
+    margin-right: 8px;
+  }
+  .phone {
+    width: 10px;
+    height: 14px;
+    margin-right: 8px;
+  }
+  .contacts-nav {
+    display: block;
+    margin-left: 84px;
+  }
+  .contacts-mail,
+  .contacts-phone {
+    display: inline-flex;
+  }
+}
+@include for-size(desktop) {
+  .contacts {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    font-size: 14px;
+    margin-right: 30px;
+  }
+  .contacts:first-child {
+    margin-right: 0;
+  }
+  .contacts-nav {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+  .contacts-nav .item + .item {
+    margin-left: 50px;
+  }
+  .contacts-item:not(:last-child) {
+    margin-right: 30px;
+  }
+}

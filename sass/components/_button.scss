@@ -1,0 +1,23 @@
+.button {
+  padding: 10px 32px;
+  border-radius: 4px;
+  border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  color: $primayry-white-color;
+  background-color: $accent-color;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  @include transition(background-color);
+  outline: none;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+    background-color: $primayry-white-color;
+  }
+}
